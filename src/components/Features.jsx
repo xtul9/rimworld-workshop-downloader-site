@@ -5,6 +5,10 @@ function Features() {
       description: 'Download and update Rimworld mods directly from Steam Workshop using bundled SteamCMD. No need to install the Steam desktop client.'
     },
     {
+      title: '100% Legal & Authorized',
+      description: 'This application operates completely legally. Rimworld developers have graciously enabled anonymous mod downloads, allowing users to access Steam Workshop content without requiring Steam authentication. This app only simplifies the process!'
+    },
+    {
       title: 'Cross-Platform',
       description: 'Native desktop application for Linux, Windows, and macOS. Built with Tauri for optimal performance and native look.'
     },
@@ -27,10 +31,6 @@ function Features() {
     {
       title: 'Real-Time Progress',
       description: 'Track download and update progress in real-time with file system watching. See exactly which mods are being downloaded and installed.'
-    },
-    {
-      title: 'Dark & Light Mode',
-      description: 'Automatic system theme detection with manual override. Choose between dark and light mode to match your preference or system settings.'
     },
     {
       title: 'Open Source',
