@@ -14,7 +14,7 @@ function Features() {
     },
     {
       title: 'Batch Downloads',
-      description: 'Download multiple mods at once by providing a list of Workshop IDs.'
+      description: 'Download multiple mods at once by providing a list of Workshop IDs or Workshop URLs.'
     },
     {
       title: 'Mod Management',

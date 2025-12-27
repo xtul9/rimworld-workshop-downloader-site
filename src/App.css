@@ -79,6 +79,13 @@ main {
   display: inline-block;
 }
 
+.release-date {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  display: inline-block;
+}
+
 /* Features Section */
 .features {
   padding: 4rem 0;

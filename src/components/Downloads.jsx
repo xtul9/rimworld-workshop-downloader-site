@@ -29,6 +29,7 @@ const getPlatformInfo = (filename) => {
 function Downloads() {
   const [downloads, setDownloads] = useState([])
   const [version, setVersion] = useState(null)
+  const [releaseDate, setReleaseDate] = useState(null)
   const [stars, setStars] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
@@ -49,6 +50,11 @@ function Downloads() {
         
         // Store version (tag_name usually contains version like "v1.0.0" or just version number)
         setVersion(data.tag_name || data.name || null)
+        
+        // Store release date
+        if (data.published_at) {
+          setReleaseDate(data.published_at)
+        }
         
         // Group assets by platform type
         const groupedDownloads = {}
@@ -112,12 +118,29 @@ function Downloads() {
     return `${mb.toFixed(1)} MB`
   }
 
+  const formatReleaseDate = (dateString) => {
+    if (!dateString) return null
+    const date = new Date(dateString)
+    return date.toLocaleDateString('en-US', { 
+      year: 'numeric', 
+      month: 'short', 
+      day: 'numeric' 
+    })
+  }
+
   return (
     <section className="downloads">
       <div className="container">
         <h2 className="section-title">
           Downloads
-          {version && <span className="version-badge">{version}</span>}
+          {version && (
+            <>
+              <span className="version-badge">{version}</span>
+              {releaseDate && (
+                <span className="release-date">Released {formatReleaseDate(releaseDate)}</span>
+              )}
+            </>
+          )}
         </h2>
         
         {loading && (
