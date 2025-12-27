@@ -1,28 +1,40 @@
 function Features() {
   const features = [
     {
-      title: 'No Steam Required',
-      description: 'Download Rimworld mods directly from Steam Workshop without needing Steam installed on your system.'
+      title: 'No Steam Client Required',
+      description: 'Download and update Rimworld mods directly from Steam Workshop using bundled SteamCMD. No need to install the Steam desktop client.'
     },
     {
       title: 'Cross-Platform',
-      description: 'Works on Linux, Windows, and macOS. Built with cross-platform compatibility in mind.'
+      description: 'Native desktop application for Linux, Windows, and macOS. Built with Tauri for optimal performance and native look.'
     },
     {
-      title: 'Easy to Use',
-      description: 'Simple interface that makes downloading and managing mods straightforward.'
+      title: 'Smart Mod Detection',
+      description: 'Automatically detect outdated mods in your Rimworld mods folder. Query your entire collection and see which mods need updates.'
     },
     {
-      title: 'Batch Downloads',
-      description: 'Download multiple mods at once by providing a list of Workshop IDs or Workshop URLs.'
+      title: 'Parallel Downloads',
+      description: 'Download up to 4 mods simultaneously using parallel SteamCMD instances with intelligent size-based load balancing for maximum speed.'
     },
     {
-      title: 'Mod Management',
-      description: 'Manage your mod updates with ease.'
+      title: 'Comprehensive Mod Management',
+      description: 'View all installed mods, search and sort them, force updates, ignore specific updates (with undo), and manage your mod collection with ease.'
+    },
+    {
+      title: 'Backup & Restore',
+      description: 'Toggleable automatic backups before updating mods. Restore individual mods or entire collections from backups with a single click.'
+    },
+    {
+      title: 'Real-Time Progress',
+      description: 'Track download and update progress in real-time with file system watching. See exactly which mods are being downloaded and installed.'
+    },
+    {
+      title: 'Dark & Light Mode',
+      description: 'Automatic system theme detection with manual override. Choose between dark and light mode to match your preference or system settings.'
     },
     {
       title: 'Open Source',
-      description: 'Free and open source based on MIT license. Contribute, fork, and customize to your needs.'
+      description: 'Free and open source under MIT license. Contribute, fork, and customize to your needs. Community-driven development.'
     }
   ]
 
