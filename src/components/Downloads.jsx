@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 const REPO_OWNER = 'xtul9'
 const REPO_NAME = 'rimworld-workshop-downloader'
 const API_URL = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/releases/latest`
+const REPO_API_URL = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}`
 
 // Map file extensions to platform info
 // Order: 1=Windows, 2=Linux(rpm), 3=Linux(deb), 4=macOS
@@ -28,6 +29,7 @@ const getPlatformInfo = (filename) => {
 function Downloads() {
   const [downloads, setDownloads] = useState([])
   const [version, setVersion] = useState(null)
+  const [stars, setStars] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
 
@@ -84,6 +86,24 @@ function Downloads() {
     }
 
     fetchReleases()
+  }, [])
+
+  useEffect(() => {
+    const fetchRepoInfo = async () => {
+      try {
+        const response = await fetch(REPO_API_URL)
+        
+        if (response.ok) {
+          const data = await response.json()
+          setStars(data.stargazers_count)
+        }
+      } catch (err) {
+        // Silently fail - stars are not critical
+        console.error('Error fetching repo info:', err)
+      }
+    }
+
+    fetchRepoInfo()
   }, [])
 
   const formatFileSize = (bytes) => {
@@ -156,6 +176,11 @@ function Downloads() {
           >
             View Source Code on GitHub
           </a>
+          {stars !== null && (
+            <span className="stars-count">
+              ⭐ {stars.toLocaleString()}
+            </span>
+          )}
         </div>
       </div>
     </section>

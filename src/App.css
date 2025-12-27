@@ -236,6 +236,11 @@ main {
 .source-code {
   text-align: center;
   margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .source-button {
@@ -253,6 +258,17 @@ main {
 .source-button:hover {
   background-color: #1a1a1a;
   transform: translateY(-2px);
+}
+
+.stars-count {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 1rem;
 }
 
 /* Footer */
