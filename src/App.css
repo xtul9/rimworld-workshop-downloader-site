@@ -22,6 +22,29 @@ main {
   text-align: center;
 }
 
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.header-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3));
+  border-radius: 12px;
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .header-title {
   font-size: 2.5rem;
   font-weight: 600;
@@ -293,6 +316,10 @@ main {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .header-image {
+    max-width: 100%;
+  }
+
   .header-title {
     font-size: 2rem;
   }
