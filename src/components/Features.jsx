@@ -38,6 +38,12 @@ function Features() {
             </div>
           ))}
         </div>
+        <div className="early-development-notice">
+          <p className="early-development-text">
+            <strong>⚠️ Early Development:</strong> This application is in early development phase and bugs may occur. 
+            Contributions and bug reports are welcome!
+          </p>
+        </div>
       </div>
     </section>
   )

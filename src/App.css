@@ -117,6 +117,27 @@ main {
   line-height: 1.6;
 }
 
+.early-development-notice {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  background-color: #fff3cd;
+  border: 2px solid #ffc107;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.early-development-text {
+  margin: 0;
+  color: #856404;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.early-development-text strong {
+  color: #856404;
+  font-weight: 600;
+}
+
 /* Downloads Section */
 .downloads {
   padding: 4rem 0;
